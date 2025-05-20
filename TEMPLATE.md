@@ -1,31 +1,51 @@
 ---
-title: My Super Awesome Tutorial
-date: 1970-01-01
+title: ESP_NOW Two Way Communication Tutorial
+date: 2025-05-19
 authors:
-  - name: John Doe
-  - name: Mary Jane
+  - name: Keng-Lien Lin
 ---
 
-![relevant graphic or workshop logo](image/path)
+<img width="1266" alt="Screenshot 2025-05-19 at 11 11 28 PM" src="https://github.com/user-attachments/assets/3845e0b0-119c-473a-9e08-e551bdfeee83" />
 
 ## Introduction
 
-Write a short section on what the tutorial is aiming to accomplish.
-What is the motivation behind the tutorial?
-What do you want readers to gain from the tutorial?
+In this tutorial, you’ll learn how to establish two‑way ESP‑NOW communication between multiple ESP32 boards. Rather than relying on a router (Wi‑Fi) or dealing with Bluetooth’s limited range and latency, ESP‑NOW offers a lightweight, peer‑to‑peer protocol capable of sending up to 250 bytes per packet. By the end, you’ll have a reliable, low‑latency link between your ESP32s for seamless data exchange.
 
 ### Learning Objectives
 
-- Bullet list of skills/concepts to be covered
+By following this guide, you will:
 
-Any additional notes from the developers can be included here.
+- Understand the fundamentals of ESP‑NOW and how it compares to Wi‑Fi and Bluetooth
+
+- Discover how to retrieve and use ESP32 MAC addresses for peer setup
+
+- Configure ESP‑NOW peers for one‑to‑one and broadcast messaging
+
+- Implement send and receive callbacks to handle incoming data
+
+- Test and troubleshoot two‑way data transfer on multiple boards
 
 ### Background Information
 
-Describe your topic here. What does it do? Why do you use it?
-Are there other similar things to use? What are the pros and cons?
-Explain important concepts that are necessary to understand.
-Include (and cite if needed) any visuals that will help the audience understand.
+**What is ESP‑NOW?**
+
+ESP‑NOW is a proprietary, connectionless wireless protocol developed by Espressif that allows direct, low‑power communication between ESP32 devices. It bypasses the Wi‑Fi stack, reducing overhead and latency, and doesn’t require a network or access point.
+
+**Why use ESP‑NOW?**
+
+- Low latency & power: Ideal for battery‑powered sensors and real‑time controls
+
+- Simple peer setup: Direct MAC‑addressed messaging without DHCP or security keys
+
+- 250‑byte payloads: Sufficient for most sensor readings, commands, and small data packets
+
+**Alternatives**
+
+- Wi‑Fi: High throughput but dependent on routers and networks
+
+- Bluetooth: Good for short‑range but adds pairing complexity and can introduce latency
+
+---
 
 ## Getting Started
 
